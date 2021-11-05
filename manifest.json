@@ -1,0 +1,21 @@
+{
+	"manifest_version": 3,
+	"name": "Tranditional <=> Simplified",
+	"version": "1.0",
+
+	"default_locale": "zh_TW",
+	"description": "Translate HTML input between Traditional and Simplified",
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["inputProxy.js"]
+		}
+	]
+}

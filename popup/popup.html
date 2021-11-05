@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Add Domain</title>
+		<style>
+			main {
+				width: 280px;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<template id="add-domain-form">
+			<style>
+				#form-url {
+					width: 100%;
+				}
+				input {
+					box-sizing: border-box;
+				}
+				.sec-row {
+					display: flex;
+					margin-top: 4px;
+				}
+				.sec-row > * {
+					flex: 1;
+				}
+			</style>
+			<form>
+				<div>
+					<i18n-element>translateDomain</i18n-element>
+					<input id="form-url" type="url" name="domain" pattern=".*://.*">
+				</div>
+				<div class="sec-row">
+					<label for="simplified-radio">
+						<input type="radio" id="simplified-radio" name="targetLang" value="simplified" checked>
+						<i18n-element>simplified</i18n-element>
+					</label>
+					<label for="tranditional-radio">
+						<input type="radio" id="tranditional-radio" name="targetLang" value="tranditional">
+						<i18n-element>tranditional</i18n-element>
+					</label>
+					<input type="submit">
+				</div>
+			</form>
+		</template>
+		<script src="I18nElement.mjs"></script>
+		<script src="AddDomainForm.mjs"></script>
+		<main>
+			<add-domain-form></add-domain-form>
+		</main>
+	</body>
+</html>
+

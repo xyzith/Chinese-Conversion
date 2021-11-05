@@ -1,0 +1,11 @@
+{
+	"tranditional": {
+		"message": "繁體"
+	},
+	"simplified": {
+		"message": "簡體"
+	},
+	"translateDomain": {
+		"message": "自動翻譯此Domain為"
+	}
+}
