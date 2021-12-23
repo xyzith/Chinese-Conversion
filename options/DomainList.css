@@ -1,0 +1,7 @@
+.domain-list {
+	margin: 60px;
+	display: grid;
+	grid: auto-flow / repeat(3, 1fr);
+	gap: 20px;
+	row-gap: 20px;
+}

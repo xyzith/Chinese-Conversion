@@ -1,0 +1,20 @@
+.domain-item {
+	display: flex;
+	border-radius: 8px;
+	padding: 6px 10px;
+	box-shadow: 2px 2px 8px black;
+	background-color: white;
+}
+
+.doamin {
+	flex: 1;
+}
+
+.target-lang {
+	flex: 1;
+	margin: 0 8px;
+}
+
+.del-btn {
+}
+

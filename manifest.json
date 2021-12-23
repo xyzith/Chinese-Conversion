@@ -5,8 +5,9 @@
 
 	"default_locale": "zh_TW",
 	"description": "Translate HTML input between Traditional and Simplified",
+	"options_page": "options/options.html",
 	"action": {
-		"default_popup": "popup.html"
+		"default_popup": "popup/popup.html"
 	},
 	"permissions": [
 		"activeTab",

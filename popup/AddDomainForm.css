@@ -1,0 +1,13 @@
+#form-url {
+	width: 100%;
+}
+input {
+	box-sizing: border-box;
+}
+.sec-row {
+	display: flex;
+	margin-top: 4px;
+}
+.sec-row > * {
+	flex: 1;
+}

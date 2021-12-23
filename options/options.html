@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Translate Options</title>
+		<link rel="stylesheet" href="./options.css">
+	</head>
+	<body>
+		<template id="domain-item">
+			<link rel="stylesheet" href="./DomainItem.css">
+			<div class="domain-item">
+				<div class="domain">
+					<slot name="domain"></slot>
+				</div>
+				<div class="target-lang">
+					<slot name="target-lang">default</slot>
+				</div>
+				<button class="del-btn">&#x1f5d1;</button>
+			</div>
+		</template>
+		<template id="domain-list">
+			<link rel="stylesheet" href="./DomainList.css">
+			<div class="domain-list"></div>
+		</template>
+		<script type="module" src="../I18nElement.mjs"></script>
+		<script type="module" src="DomainItem.mjs"></script>
+		<script type="module" src="DomainList.mjs"></script>
+		<main>
+			<domain-list></domain-list>
+		</main>
+	</body>
+</html>
+

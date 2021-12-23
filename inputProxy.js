@@ -26,13 +26,20 @@ function getTargetLang() {
 }
 
 function bindAutoTranslateInput(el) {
-	const translateAndUnbind = async (ev) => {
+	const translate = async (ev) => {
 		const { value } = el;
 		const targetLang = await getTargetLang();
 		el.value = translateString(value, targetLang);
-		el.removeEventListener('blur', translateAndUnbind);
 	};
+
+	const translateAndUnbind = async (ev) => {
+		translate();
+		el.removeEventListener('blur', translateAndUnbind);
+		el.removeEventListener('compositionend', translate);
+	};
+
 	el.addEventListener('blur', translateAndUnbind);
+	el.addEventListener('compositionend', translate);
 }
 
 window.addEventListener('click', (ev) => {
