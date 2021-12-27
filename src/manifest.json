@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "Tranditional <=> Simplified",
+	"name": "Chinese Conversion Tranditional <=> Simplified",
 	"version": "1.0",
 
 	"default_locale": "zh_TW",

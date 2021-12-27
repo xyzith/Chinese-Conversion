@@ -21,18 +21,18 @@ function translateString(str, target) {
 function getTargetLang() {
 	const { origin } = window.location;
 	return new Promise((resolve) => {
-		chrome.storage.local.get('domainList', ({ domainList }) => resolve(domainList[origin]))
+		chrome.storage.local.get('domainList', ({ domainList }) => resolve(domainList[origin]));
 	});
 }
 
 function bindAutoTranslateInput(el) {
-	const translate = async (ev) => {
+	const translate = async () => {
 		const { value } = el;
 		const targetLang = await getTargetLang();
 		el.value = translateString(value, targetLang);
 	};
 
-	const translateAndUnbind = async (ev) => {
+	const translateAndUnbind = async () => {
 		translate();
 		el.removeEventListener('blur', translateAndUnbind);
 		el.removeEventListener('compositionend', translate);
